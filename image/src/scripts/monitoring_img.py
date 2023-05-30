@@ -9,7 +9,8 @@ class ImageTransferRate:
         self.start_time = time()
 
         self.publisher = rospy.Publisher('/trigger_image_publish', Empty, queue_size=1)
-        rospy.Timer(rospy.Duration(1.0), self.publish_image) # 每秒钟发布一次消息
+        # 每秒钟发布一次消息
+        rospy.Timer(rospy.Duration(1.0), self.publish_image) 
 
     def publish_image(self, event):
         self.publisher.publish(Empty())
@@ -19,7 +20,8 @@ class ImageTransferRate:
 
     def compute_transfer_rate(self):
         elapsed_time = time() - self.start_time
-        transfer_rate = self.image_count / elapsed_time # 传输速率 = 图像计数 / 经过的时间
+        # 传输速率 = 图像计数 / 经过的时间
+        transfer_rate = self.image_count / elapsed_time 
         rospy.loginfo(f"Image transfer rate: {transfer_rate} images/s")
 
 def main():
@@ -27,8 +29,8 @@ def main():
         image_rate = ImageTransferRate()
         #rospy.Subscriber('/camera/color/image_raw', Image, image_rate.image_callback)
         rospy.Subscriber('/compressed_camera_topic', CompressedImage, image_rate.image_callback)
-
-        rospy.Timer(rospy.Duration(5.0), lambda event: image_rate.compute_transfer_rate()) # 每5秒钟计算一次传输速率
+         # 每5秒钟计算一次传输速率
+        rospy.Timer(rospy.Duration(5.0), lambda event: image_rate.compute_transfer_rate())
         rospy.spin()
 
 if __name__ == '__main__':
