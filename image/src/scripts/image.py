@@ -6,7 +6,6 @@ from cv_bridge import CvBridge
 import cv2
 import threading
 
-import SophonModel
 def compress_image(image):
     # 压缩图像为JPEG格式
     _, compressed_image = cv2.imencode('.jpg', image, [cv2.IMWRITE_JPEG_QUALITY, 50])
