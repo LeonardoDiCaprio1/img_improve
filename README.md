@@ -4,7 +4,7 @@
 - 建议使用千兆以上的网络来构建局域网或者是提升相关WiFi模块的传输速率，也就是改善相关硬件设备。
 ### 2.操作步骤
 ```
-mkdir -p ~/speed/src && cd improve/src
+mkdir -p ~/speed/src && cd speed/src
 git clone https://github.com/LeonardoDiCaprio1/img_improve.git
 cd ..
 catkin_make
