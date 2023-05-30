@@ -23,6 +23,7 @@ include_directories(
 
 catkin_install_python(PROGRAMS
   scripts/image.py
+  scripts/monitoring_img.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
