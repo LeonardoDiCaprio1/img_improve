@@ -4,14 +4,14 @@
 - 建议使用千兆以上的网络来构建局域网或者是提升相关WiFi模块的传输速率，也就是改善相关硬件设备。
 ### 2.操作步骤
 ```
-mkdir -p ~/improve/src && cd improve/src
+mkdir -p ~/speed/src && cd improve/src
 git clone https://github.com/LeonardoDiCaprio1/img_improve.git
 cd ..
 catkin_make
 ```
 ### 3.运行指令
 ```
-cd improve 
+cd speed 
 source devel/setup.bash
 rosrun image image.py
 rosrun image monitoring_img.py
