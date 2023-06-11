@@ -20,8 +20,9 @@ include_directories(
 )
 
 catkin_install_python(PROGRAMS
-  scripts/image.py
+  scripts/img_cvbridge.py
   scripts/monitoring_img.py
+  scripts/img_numpy.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
