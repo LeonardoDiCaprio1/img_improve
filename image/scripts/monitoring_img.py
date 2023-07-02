@@ -8,7 +8,7 @@ class ImageTransferRate:
         self.start_time = rospy.Time.now()
 
         self.publisher = rospy.Publisher('/trigger_image_publish', Empty, queue_size=1)
-        self.rate = rospy.Rate(0.2)  # 每秒计算一次传输速率
+        self.rate = rospy.Rate(0.2)  # 每5秒计算一次传输速率
 
         rospy.Timer(rospy.Duration(1.0), self.publish_image) 
 
