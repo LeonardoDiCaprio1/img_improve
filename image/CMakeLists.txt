@@ -23,6 +23,7 @@ catkin_install_python(PROGRAMS
   scripts/img_cvbridge.py
   scripts/monitoring_img.py
   scripts/img_numpy.py
+  scripts/img_cvbridge_improve.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
