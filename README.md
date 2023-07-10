@@ -5,8 +5,6 @@
 - 建议使用千兆以上的网络来构建局域网或者是提升相关WiFi模块的传输速率，也就是改善相关硬件设备。
 ### 2.安装依赖
 ```
-pip install rospy
-pip install sensor_msgs
 pip install opencv-python
 pip install numpy
 pip install scipy
