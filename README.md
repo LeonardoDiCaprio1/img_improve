@@ -20,3 +20,9 @@ rosrun image monitoring_img.py
 ### 4.相关说明
 - 请在主机端运行rosrun image image.py
 - image.py是压缩原始相机节点，而monitoring_img.py是监听原始相机节点的传输速率或者压缩节点后的传输速率，详情请阅览相关代码。
+### 5.更新日期
+- 2023年7月10日更新了img_cvbridge_improve.py，采取了高斯滤波来进行图像处理
+```
+source devel/setup.bash
+rosrun image img_cvbridge_improve.py
+```
