@@ -41,7 +41,7 @@ class ImageProcessor:
             with self.lock:
                 if self.cv_image is not None:
                     # 高斯滤波
-                    filtered_image = self.apply_gaussian_filter(self.cv_image, sigma=1.0)
+                    filtered_image = self.apply_gaussian_filter(self.cv_image, sigma=0.25)
 
                     # 压缩图像
                     compressed_image = compress_image(filtered_image)
