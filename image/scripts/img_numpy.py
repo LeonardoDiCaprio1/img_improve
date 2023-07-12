@@ -19,7 +19,7 @@ class ImageProcessor:
 
     def process_image(self, msg):
         try:
-        # 将ROS图像消息转换为OpenCV图像
+        # 将图像消息转换为numpy数组
             cv_image = np.frombuffer(msg.data, dtype=np.uint8).reshape((msg.height, msg.width, -1))
             with self.lock:
                 self.cv_image = cv_image
